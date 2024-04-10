@@ -1,0 +1,35 @@
+{
+  "name": "devops-repository",
+  "version": "0.0.0",
+  "description": "A basic sample repository for Azure DevOps",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npx simple-git-hooks",
+    "commitlint": "commitlint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaBitsDev/devops-repository.git"
+  },
+  "keywords": [
+    "commitlint",
+    "Azure",
+    "DevOps",
+    "Conventional",
+    "Commits"
+  ],
+  "author": "MaBits",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaBitsDev/devops-repository/issues"
+  },
+  "homepage": "https://github.com/MaBitsDev/devops-repository#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "simple-git-hooks": "^2.11.1"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npm run commitlint -- -e \"$@\""
+  }
+}
